@@ -64,6 +64,7 @@
 					<p>are getting married</p>
 					<p><span></span><i class="fa fa-heart"></i><span></span></p>
 					<p>October 7th, 2018</p>
+					<p>Healdsburg, CA</p>
 				</div>
 			</div>
 			<div class="countdown" data-scroll-reveal="enter from the bottom after 5s"></div>
@@ -96,12 +97,14 @@
 		<!-- ========== MENU END ========== -->
 
 		<!-- ========== RSVP START ========== -->
-		<section id="rsvp" style="background: #f5f4ec;">
+		<section id="rsvp">
 			<div class="container text-center">
 				<div class="row">
 					<div class="col-sm-12 heading" data-scroll-reveal>
                         <h2>RSVP</h2>
                         <p><span></span><i class="fa fa-ticket"></i><span></span></p>
+                    </div>
+                    <div class="col-sm-12" data-scroll-reveal>
                         <p>Please RSVP at your earlist convenience. Do it now! You can change your mind, but any information will help us out so much!</p>
                     </div>
 				</div>
@@ -156,7 +159,7 @@
                     <div calss="col-sm-12">
                         <p><a href="https://en.wikipedia.org/wiki/Healdsburg,_California">Healdsburg</a> is in northern Sonoma County, about 70 miles north of San Francisco.</p>
 
-                        <p>The closest airport is <a href="https://en.wikipedia.org/wiki/Albany_International_Airport">San Francisco International Airport (SFO)</a>, but <a href="https://en.wikipedia.org/wiki/Oakland_International_Airport">Oakland</a> and <a href="https://en.wikipedia.org/wiki/Sacramento_International_Airport">Sacramento</a> within striking distance, if the flights are cheaper.
+                        <p>The closest airport is <a href="https://en.wikipedia.org/wiki/Albany_International_Airport">San Francisco International Airport (SFO)</a>, but <a href="https://en.wikipedia.org/wiki/Oakland_International_Airport">Oakland</a> and <a href="https://en.wikipedia.org/wiki/Sacramento_International_Airport">Sacramento</a> are within striking distance, if the flights are cheaper.
 
                         <p>Watch this space for information to help attendees coordinate on transportation and lodging.</p>
                     </div>
@@ -194,7 +197,7 @@
 					{name: "Styled Map"});
 								var mapOptions = {
 									scrollwheel: false,
-									zoom: 10.00,
+									zoom: 10.1,
 									center: new google.maps.LatLng(38.1923349, -122.1817807),
 					mapTypeControlOptions: {
 					  mapTypeIds: [google.maps.MapTypeId.ROADMAP, 'map_style']
@@ -212,59 +215,58 @@
 				var places = [
 					['Villa Chanticleer', 38.621644, -122.8516367, 1],
 					['SFO', 37.6213129, -122.3811441, 1]
-					// ['New York City', 40.7128 , -74.0059, 1],
 				];
 
-				// function setMarkers(map, locations) {
-				// 	// Add markers to the map
-				// 	var image = [{
-    //                         url: 'images/map-marker.png',
-    //                         // This marker is 40 pixels wide by 42 pixels tall.
-    //                         size: new google.maps.Size(62, 58),
-    //                         // The origin for this image is 0,0.
-    //                         origin: new google.maps.Point(0,0),
-    //                         // The anchor for this image is the base of the pin at 20,42.
-    //                         anchor: new google.maps.Point(20, 58)
-    //                     },
-    //                     {
-    //                         url: 'images/map-airplane.png',
-    //                         // This marker is 40 pixels wide by 42 pixels tall.
-    //                         size: new google.maps.Size(58, 58),
-    //                         // The origin for this image is 0,0.
-    //                         origin: new google.maps.Point(0,0),
-    //                         // The anchor for this image is the base of the pin at 20,42.
-    //                         anchor: new google.maps.Point(29, 58)
-    //                     } //,
-    //                     // {
-    //                     //     url: 'images/map-marker.png',
-    //                     //     // This marker is 40 pixels wide by 42 pixels tall.
-    //                     //     size: new google.maps.Size(62, 58),
-    //                     //     // The origin for this image is 0,0.
-    //                     //     origin: new google.maps.Point(0,0),
-    //                     //     // The anchor for this image is the base of the pin at 20,42.
-    //                     //     anchor: new google.maps.Point(20, 58)
-    //                     // }
-    //                 ];
+				function setMarkers(map, locations) {
+					// Add markers to the map
+					var image = [{
+                            url: 'images/map-marker.png',
+                            // This marker is 40 pixels wide by 42 pixels tall.
+                            size: new google.maps.Size(62, 58),
+                            // The origin for this image is 0,0.
+                            origin: new google.maps.Point(0,0),
+                            // The anchor for this image is the base of the pin at 20,42.
+                            anchor: new google.maps.Point(20, 58)
+                        },
+                        {
+                            url: 'images/map-airplane.png',
+                            // This marker is 40 pixels wide by 42 pixels tall.
+                            size: new google.maps.Size(58, 58),
+                            // The origin for this image is 0,0.
+                            origin: new google.maps.Point(0,0),
+                            // The anchor for this image is the base of the pin at 20,42.
+                            anchor: new google.maps.Point(29, 58)
+                        } //,
+                        // {
+                        //     url: 'images/map-marker.png',
+                        //     // This marker is 40 pixels wide by 42 pixels tall.
+                        //     size: new google.maps.Size(62, 58),
+                        //     // The origin for this image is 0,0.
+                        //     origin: new google.maps.Point(0,0),
+                        //     // The anchor for this image is the base of the pin at 20,42.
+                        //     anchor: new google.maps.Point(20, 58)
+                        // }
+                    ];
 
-				// 	for (var i = 0; i < locations.length; i++) {
-				// 		var place = locations[i];
-				// 		var myLatLng = new google.maps.LatLng(place[1], place[2]);
-				// 		var marker = new google.maps.Marker({
-				// 			position: myLatLng,
-				// 			map: map,
-				// 			icon: image[i],
-				// 			title: place[0],
-				// 			zIndex: place[3],
-				// 			animation: google.maps.Animation.DROP
-				// 		});
+					for (var i = 0; i < locations.length; i++) {
+						var place = locations[i];
+						var myLatLng = new google.maps.LatLng(place[1], place[2]);
+						var marker = new google.maps.Marker({
+							position: myLatLng,
+							map: map,
+							icon: image[i],
+							title: place[0],
+							zIndex: place[3],
+							animation: google.maps.Animation.DROP
+						});
 
-				// 		var contentString = "Some content";
-				// 		google.maps.event.addListener(marker, "click", function() {
-				// 			infowindow.setContent(this.html);
-				// 			infowindow.open(map, this);
-				// 		});
-				// 	}
-				// }
+						var contentString = "Some content";
+						google.maps.event.addListener(marker, "click", function() {
+							infowindow.setContent(this.html);
+							infowindow.open(map, this);
+						});
+					}
+				}
 
 				google.maps.event.addDomListener(window, 'load', initialize);
 			</script>
