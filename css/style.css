@@ -85,7 +85,11 @@ section {
 =========================================================================================*/
 
 .tint {
-	background-image:url(https://dl.airtable.com/ZWIqiRwSS3Ct9CHQfQK6_full_Shortbread_cookies_from_Mom.jpg); background-repeat: no-repeat;
+	background:url(https://dl.airtable.com/ZWIqiRwSS3Ct9CHQfQK6_full_Shortbread_cookies_from_Mom.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	display: block;
 	height: 100%;
 	left: 0;
