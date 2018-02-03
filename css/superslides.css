@@ -1,5 +1,6 @@
 #slides {
   position: relative;
+  background: #b5b5b5;
 }
 #slides .slides-container {
   display: none;
