@@ -1,8 +1,8 @@
 ## TODO
 
-- [ ] Clean out stuff from pre-fork
-- [ ] Setup / clean up 'base' setting.
-- [ ] Make "save the date" branch
+- [x] Clean out stuff from pre-fork
+- [x] Setup / clean up 'base' setting.
+- [x] Make "save the date" branch
 - [ ] Make "invitation" branch
 - [ ] Make "wedding" branch
 - [ ] Make "afters" branch
