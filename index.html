@@ -340,7 +340,8 @@
 
 				var places = [
 					['Villa Chanticleer', 38.621644, -122.8516367, 1],
-					['SFO', 37.6213129, -122.3811441, 1]
+					['SFO', 37.6213129, -122.3811441, 1],
+                    ['Wischemann Hall', 38.4086229, -122.8230748, 1]
 				];
 
 				function setMarkers(map, locations) {
@@ -362,7 +363,14 @@
                             origin: new google.maps.Point(0,0),
                             // The anchor for this image is the base of the pin at 20,42.
                             anchor: new google.maps.Point(29, 58)
-                        } //,
+                        } ,
+                        {
+                            url: 'images/map-marker.png',
+                            size: new google.maps.Size(58, 58),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(29, 58)
+                        }
+                        //,
                         // {
                         //     url: 'images/map-marker.png',
                         //     // This marker is 40 pixels wide by 42 pixels tall.
