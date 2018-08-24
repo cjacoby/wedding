@@ -85,7 +85,7 @@ section {
 =========================================================================================*/
 
 .tint {
-	background:url(../images/shortbread_cookies_from_Mom.jpg) no-repeat center center fixed;
+	background:url(../images/zoelleandchristopher.png) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -97,6 +97,10 @@ section {
 	top: 0;
 	width: 100%;
 	z-index: 100;
+}
+
+.tint p {
+	color: #d03656;
 }
 
 .welcome {
